@@ -94,3 +94,33 @@ nav {
   margin-top: 1rem;      /* space between signature and nav links */
   font-style: normal;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
+  gap: 1.5rem;                           /* even spacing between them */
+  margin-top: 2rem;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;       /* makes each photo square */
+  object-fit: cover;          /* crops without stretching */
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.gallery img:hover {
+  opacity: 0.9;
+}
+
+.gallery figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
