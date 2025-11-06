@@ -1,0 +1,83 @@
+:root {
+  --max: 720px;
+  --fg: #111;
+  --muted: #666;
+  --bd: #ddd;
+  --bg: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 "Times New Roman", Times, serif;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: 700px;       /* limits column width for readability */
+  width: 100%;
+  margin: 0 auto;          /* centers the block horizontally */
+  padding: 1rem 1rem 4rem; /* top, sides, bottom padding */
+  text-align: left;
+}
+
+header.site {
+  max-width: var(--max);
+  margin: 3rem auto 0.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.posts article {
+  padding: 1rem 0;
+  border-top: 1px solid var(--bd);
+}
+
+.posts article:first-of-type { border-top: none; }
+
+h1 {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.3;
+}
+
+h2, h3 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.7rem;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.3;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem 0;
+}
+
+footer.site {
+  max-width: var(--max);
+  margin: 0.1rem auto;
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.signature {
+  max-width: 150px;   /* smaller size — tweak to taste */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto; /* less space below image */
+  padding: 0; /* removes extra top/bottom padding */
+}
+nav {
+  margin-top: 1rem;      /* space between signature and nav links */
+  font-style: italic;
+}
