@@ -70,7 +70,6 @@ footer.site {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
 footer.site .icon img {
   width: 20px;
   height: 20px;
@@ -91,9 +90,8 @@ footer.site .icon img:hover {
   padding: 0; /* removes extra top/bottom padding */
 }
 nav {
-  margin-top: 1rem;
-  font-style: normal;  /* not italic */
-  font-size: 1rem;     /* consistent size everywhere */
+  margin-top: 1rem;      /* space between signature and nav links */
+  font-style: normal;
 }
 .gallery {
   display: grid;
