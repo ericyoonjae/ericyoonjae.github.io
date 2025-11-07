@@ -35,7 +35,7 @@ header.site {
 
 .posts article {
   padding: 1rem 0;
-  border-top: 1px solid var(--bd);
+  border-top: none;
 }
 
 .posts article:first-of-type { border-top: none; }
