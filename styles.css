@@ -187,6 +187,6 @@ nav {
 .epigraph-author {
   display: block;
   margin-top: 0.5rem;
-  margin-left: 4rem;  /* pushes the author line slightly right */
+  margin-left: 10rem;  /* pushes the author line slightly right */
   font-style: normal; /* author name not italicized */
 }
