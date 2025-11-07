@@ -177,3 +177,16 @@ nav {
     max-width: 420px;
   }
 }
+.epigraph {
+  text-align: left;
+  font-style: italic;
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+
+.epigraph-author {
+  display: block;
+  margin-top: 0.5rem;
+  margin-left: 2rem;  /* pushes the author line slightly right */
+  font-style: normal; /* author name not italicized */
+}
