@@ -149,3 +149,33 @@ nav {
   color: var(--muted);
   font-style: italic;
 }
+/* --- Post list with thumbnail on the RIGHT --- */
+.posts .post {
+  display: grid;
+  grid-template-columns: 1fr 120px;  /* text | image */
+  gap: 1rem;
+  align-items: start;
+}
+
+/* optional: a little spacing between entries — your existing .posts article border still applies */
+.posts .post + .post {
+  margin-top: 0.75rem;
+}
+
+.posts .thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square thumbs */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Mobile: stack and show image first if you like (remove order:-1 to keep image under text) */
+@media (max-width: 640px) {
+  .posts .post {
+    grid-template-columns: 1fr;   /* one column */
+  }
+  .posts .thumb {
+    order: -1;                    /* image above text on phones */
+    max-width: 420px;
+  }
+}
