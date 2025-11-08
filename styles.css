@@ -296,3 +296,45 @@ footer.site .icon img:hover { opacity: 1; }
     max-width: 120px;      /* smaller logo on mobile */
   }
 }
+/* --- Single Post Layout: Title + Image side by side --- */
+.single-post .post-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.single-post .post-header h2 {
+  flex: 1;
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.single-post .post-header .post-image img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.95;
+}
+
+/* --- Stack vertically on mobile --- */
+@media (max-width: 640px) {
+  .single-post .post-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+  }
+
+  .single-post .post-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .single-post .post-header .post-image img {
+    width: 100%;
+    max-width: 220px;
+  }
+}
