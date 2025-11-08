@@ -296,4 +296,16 @@ footer.site .icon img:hover { opacity: 1; }
     max-width: 120px;      /* smaller logo on mobile */
   }
 }
+/* Center images inside posts (essay / poem pages) */
+.post-image {
+  text-align: center;          /* centers inline content like <img> */
+  margin: 0.1rem auto;         /* equal space above and below */
+}
+
+.post-image img {
+  display: inline-block;       /* allows centering inside text-align: center */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
