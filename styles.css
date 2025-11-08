@@ -190,26 +190,25 @@ nav {
 @media (max-width: 640px) {
   /* tighten space above first post on home */
   .wrap {
-    padding-top: 0.3rem;         /* reduces gap under nav */
+    padding-top: 0.3rem;
   }
 
   .posts {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
   }
 
+  /* tighter spacing between post previews */
   .posts .post {
     grid-template-columns: 1fr;
-    gap: 0.4rem;
+    gap: 0.4rem;            /* text ↔ image spacing */
+    margin-top: 0.4rem;     /* reduce space between posts (was ~0.75rem) */
+    padding: 0.5rem 0;      /* slightly smaller padding inside each post */
   }
 
+  /* adjust thumbnail size and spacing */
   .posts .thumb {
     order: -1;
-    max-width: 240px;
-    margin: 0.2rem auto 0;
-  }
+    max-width: 220px;
+    margin: 0
 
-  .posts .thumb img {
-    width: 100%;
-    height: auto;
-  }
-}
+    
