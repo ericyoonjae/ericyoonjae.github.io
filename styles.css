@@ -28,7 +28,7 @@ a:hover { text-decoration: underline; }
 
 header.site {
   max-width: var(--max);
-  margin: 3rem auto 0.5rem; /* unchanged */
+  margin: 3rem auto 0.5rem;
   text-align: center;
   font-style: italic;
 }
@@ -52,14 +52,14 @@ h2, h3 {
   font-weight: normal;
   font-style: italic;
   font-size: 1.7rem;
-  margin: 0 0 0.3rem 0;  /* slightly tighter (was 0.4rem) */
+  margin: 0 0 0.3rem 0;
   line-height: 1.3;
 }
 
 .meta {
   color: var(--muted);
   font-size: 0.9rem;
-  margin: 0 0 0.4rem 0;  /* slightly tighter (was 0.6rem) */
+  margin: 0 0 0.4rem 0;
 }
 
 footer.site {
@@ -79,10 +79,7 @@ footer.site .icon img {
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
-
-footer.site .icon img:hover {
-  opacity: 1;
-}
+footer.site .icon img:hover { opacity: 1; }
 
 .signature {
   max-width: 150px;
@@ -103,11 +100,7 @@ nav {
   gap: 1.5rem;
   margin-top: 2rem;
 }
-
-.gallery figure {
-  margin: 0;
-}
-
+.gallery figure { margin: 0; }
 .gallery img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -115,11 +108,7 @@ nav {
   border-radius: 6px;
   transition: opacity 0.3s ease;
 }
-
-.gallery img:hover {
-  opacity: 0.9;
-}
-
+.gallery img:hover { opacity: 0.9; }
 .gallery figcaption {
   text-align: center;
   font-size: 0.9rem;
@@ -130,9 +119,8 @@ nav {
 
 .post-image {
   text-align: left;
-  margin: 0.8rem 0 1.2rem 0; /* was 2rem 0; now tighter above & below image */
+  margin: 0.8rem 0 1.2rem 0;
 }
-
 .post-image img {
   width: 100%;
   max-width: 200px;
@@ -141,32 +129,25 @@ nav {
   opacity: 0.95;
   transition: opacity 0.3s ease;
 }
-
-.post-image img:hover {
-  opacity: 1;
-}
-
+.post-image img:hover { opacity: 1; }
 .post-image figcaption {
-  margin-top: 0.4rem;       /* slightly tighter (was 0.5rem) */
+  margin-top: 0.4rem;
   font-size: 0.9rem;
   color: var(--muted);
   font-style: italic;
 }
 
-/* --- Post list with thumbnail on the RIGHT (home) --- */
+/* --- Post list with thumbnail on the RIGHT --- */
 .posts .post {
   display: grid;
   grid-template-columns: 1fr 120px;  /* text | image */
-  gap: 0.8rem;                       /* tighter text ↔ image spacing */
+  gap: 0.8rem;
   align-items: start;
-  padding: 0.6rem 0;                 /* slightly smaller internal padding */
+  padding: 0.6rem 0;
 }
-
-/* tighter spacing between post previews */
 .posts .post + .post {
-  margin-top: 0.5rem;                /* smaller vertical gap between posts */
+  margin-top: 0.5rem;
 }
-
 
 .posts .thumb img {
   width: 100%;
@@ -181,7 +162,6 @@ nav {
   margin: 2rem 0;
   line-height: 1.6;
 }
-
 .epigraph-author {
   display: block;
   margin-top: 0.5rem;
@@ -189,35 +169,68 @@ nav {
   font-style: normal;
 }
 
-/* --- MOBILE UI IMPROVEMENTS ONLY --- */
+/* --- MOBILE LAYOUT (phones, keep side-by-side) --- */
 @media (max-width: 640px) {
-  /* tighten space above first post */
+
   .wrap {
-    padding-top: 0.2rem;  /* slightly less padding under nav */
+    padding: 0.6rem 0.9rem 2rem;
   }
 
   .posts {
-    margin-top: 0.3rem;   /* smaller gap between nav and first post */
+    margin-top: 0.3rem;
   }
 
-  /* even tighter layout for post previews */
+  /* Side-by-side but smaller */
   .posts .post {
-    grid-template-columns: 1fr;
-    gap: 0.3rem;           /* reduce text ↔ image gap */
-    margin-top: 0.3rem;    /* less space between posts */
-    padding: 0.4rem 0;     /* smaller internal padding */
+    grid-template-columns: 2.4fr 1fr;  /* text | thumb */
+    gap: 0.4rem;
+    padding: 0.35rem 0;
+    margin-top: 0.25rem;
   }
 
   .posts .thumb {
-    order: -1;
-    max-width: 210px;
-    margin: 0.1rem auto 0.1rem;  /* tighter vertical spacing around image */
+    order: 0;
+    max-width: 80px;
+    margin: 0;
+    justify-self: end;
   }
 
   .posts .thumb img {
     width: 100%;
     height: auto;
+    border-radius: 4px;
+  }
+
+  .post-body h2 {
+    font-size: 1.02rem;
+    margin: 0 0 0.15rem 0;
+  }
+
+  .meta {
+    font-size: 0.72rem;
+    margin: 0 0 0.18rem 0;
+  }
+
+  .post-body p {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 0.2rem;
+  }
+
+  .post-image {
+    margin: 0.5rem 0 0.8rem 0;
+  }
+
+  .post-image img {
+    max-width: 180px;
+  }
+
+  .post-image figcaption {
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
   }
 }
-
-    
