@@ -238,7 +238,7 @@ footer.site .icon img:hover { opacity: 1; }
 
   .posts .thumb {
     order: 0;
-    max-width: 80px;
+    max-width: 100px;   /* was 80px */
     margin: 0;
     justify-self: end;
   }
@@ -250,8 +250,8 @@ footer.site .icon img:hover { opacity: 1; }
   }
 
   /* smaller preview titles on mobile */
-  .posts .post-body h2 {
-    font-size: 0.8rem;
+    .posts .post-body h2 {
+    font-size: 0.975rem;      /* 75% of 1.3rem */
     line-height: 1.25;
     font-weight: normal;
     margin: 0 0 0.06rem 0;
