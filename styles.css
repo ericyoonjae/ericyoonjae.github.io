@@ -156,14 +156,17 @@ nav {
 /* --- Post list with thumbnail on the RIGHT (home) --- */
 .posts .post {
   display: grid;
-  grid-template-columns: 1fr 120px;
-  gap: 1rem;
+  grid-template-columns: 1fr 120px;  /* text | image */
+  gap: 0.8rem;                       /* tighter text ↔ image spacing */
   align-items: start;
+  padding: 0.6rem 0;                 /* slightly smaller internal padding */
 }
 
+/* tighter spacing between post previews */
 .posts .post + .post {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;                /* smaller vertical gap between posts */
 }
+
 
 .posts .thumb img {
   width: 100%;
