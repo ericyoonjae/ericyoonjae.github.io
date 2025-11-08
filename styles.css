@@ -36,11 +36,13 @@ header.site {
 /* --- Main navigation (Home · About) --- */
 .main-nav {
   display: inline-flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
   justify-content: center;
   font-style: normal;
-  font-size: 0.95rem;
+  font-size: 1.1rem;   /* increased from 0.95rem */
+  letter-spacing: 0.3px;
 }
+
 
 .main-nav a {
   color: inherit;
@@ -208,6 +210,11 @@ nav {
     gap: 0.4rem;
     padding: 0.35rem 0;
     margin-top: 0.25rem;
+  }
+
+  .main-nav {
+  font-size: 0.85rem;
+  gap: 0.4rem;
   }
 
   .posts .thumb {
