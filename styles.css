@@ -60,6 +60,7 @@ nav {
 .posts article {
   padding: 0;
   border-top: none;
+  margin: 0;  
 }
 .posts article:first-of-type {
   border-top: none;
