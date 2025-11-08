@@ -188,31 +188,24 @@ nav {
 
 /* --- MOBILE UI IMPROVEMENTS ONLY --- */
 @media (max-width: 640px) {
-  /* shrink logo */
-  .signature {
-    max-width: 110px;
+  /* tighten space above first post */
+  .wrap {
+    padding-top: 0.3rem;   /* reduce default 1rem padding */
   }
 
-  /* reduce top spacing */
-  header.site {
-    margin: 1.5rem auto 0.3rem;
+  .posts {
+    margin-top: 0.5rem;    /* smaller gap between nav and posts */
   }
 
-  nav {
-    margin-top: 0.2rem;
-  }
-
-  /* tighter post layout */
   .posts .post {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.4rem;            /* slightly smaller gap between text & image */
   }
 
-  /* smaller thumbnails */
   .posts .thumb {
-    order: -1;
-    max-width: 220px;
-    margin: 0.2rem auto 0;
+    order: -1;              /* image above text */
+    max-width: 240px;
+    margin: 0.2rem auto 0;  /* tighter spacing around image */
   }
 
   .posts .thumb img {
@@ -220,3 +213,4 @@ nav {
     height: auto;
   }
 }
+
