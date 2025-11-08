@@ -82,6 +82,7 @@ footer.site .icon img {
 footer.site .icon img:hover {
   opacity: 1;
 }
+
 .signature {
   max-width: 150px;   /* smaller size — tweak to taste */
   height: auto;
@@ -89,10 +90,12 @@ footer.site .icon img:hover {
   margin: 0 auto 0.5rem auto; /* less space below image */
   padding: 0; /* removes extra top/bottom padding */
 }
+
 nav {
   margin-top: 1rem;      /* space between signature and nav links */
   font-style: normal;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
@@ -123,6 +126,7 @@ nav {
   font-style: italic;
   margin-top: 0.5rem;
 }
+
 .post-image {
   text-align: left;
   margin: 2rem 0;
@@ -147,6 +151,7 @@ nav {
   color: var(--muted);
   font-style: italic;
 }
+
 /* --- Post list with thumbnail on the RIGHT --- */
 .posts .post {
   display: grid;
@@ -167,16 +172,6 @@ nav {
   border-radius: 6px;
 }
 
-/* Mobile: stack and show image first if you like (remove order:-1 to keep image under text) */
-@media (max-width: 640px) {
-  .posts .post {
-    grid-template-columns: 1fr;   /* one column */
-  }
-  .posts .thumb {
-    order: -1;                    /* image above text on phones */
-    max-width: 420px;
-  }
-}
 .epigraph {
   text-align: left;
   font-style: italic;
@@ -189,4 +184,39 @@ nav {
   margin-top: 0.5rem;
   margin-left: 2.5rem;  /* tweak to taste */
   font-style: normal;
+}
+
+/* --- MOBILE UI IMPROVEMENTS ONLY --- */
+@media (max-width: 640px) {
+  /* shrink logo */
+  .signature {
+    max-width: 110px;
+  }
+
+  /* reduce top spacing */
+  header.site {
+    margin: 1.5rem auto 0.3rem;
+  }
+
+  nav {
+    margin-top: 0.2rem;
+  }
+
+  /* tighter post layout */
+  .posts .post {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  /* smaller thumbnails */
+  .posts .thumb {
+    order: -1;
+    max-width: 220px;
+    margin: 0.2rem auto 0;
+  }
+
+  .posts .thumb img {
+    width: 100%;
+    height: auto;
+  }
 }
