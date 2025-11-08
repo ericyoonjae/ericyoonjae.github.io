@@ -232,5 +232,11 @@ nav {
   .post-image figcaption {
     margin-top: 0.3rem;
     font-size: 0.75rem;
+  }  
+  
+  /* shrink Oreo logo slightly on mobile */
+  .signature {
+    max-width: 120px;  /* smaller than desktop (150px) */
   }
+
 }
