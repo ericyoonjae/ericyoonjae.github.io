@@ -37,7 +37,6 @@ header.site {
   padding: 1rem 0;
   border-top: none;
 }
-
 .posts article:first-of-type { border-top: none; }
 
 h1 {
@@ -70,7 +69,6 @@ footer.site {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
 footer.site .icon img {
   width: 20px;
   height: 20px;
@@ -92,6 +90,13 @@ footer.site .icon img:hover { opacity: 1; }
 nav {
   margin-top: 1rem;
   font-style: normal;
+}
+
+/* simple intro text if you add one later */
+.intro {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 0.8rem 0;
 }
 
 .gallery {
@@ -137,7 +142,7 @@ nav {
   font-style: italic;
 }
 
-/* --- Post list with thumbnail on the RIGHT --- */
+/* --- Post list with thumbnail on the RIGHT (desktop) --- */
 .posts .post {
   display: grid;
   grid-template-columns: 1fr 120px;  /* text | image */
@@ -148,7 +153,6 @@ nav {
 .posts .post + .post {
   margin-top: 0.5rem;
 }
-
 .posts .thumb img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -169,7 +173,56 @@ nav {
   font-style: normal;
 }
 
-/* --- MOBILE LAYOUT (phones, keep side-by-side) --- */
+/* --- Dropdown Menu --- */
+.main-nav {
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 140px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  border-radius: 6px;
+  text-align: left;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  color: var(--fg);
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3f3f3;
+}
+
+/* show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- MOBILE LAYOUT --- */
 @media (max-width: 640px) {
 
   .wrap {
@@ -180,7 +233,7 @@ nav {
     margin-top: 0.3rem;
   }
 
-  /* Side-by-side but smaller */
+  /* keep side-by-side but compact */
   .posts .post {
     grid-template-columns: 2.4fr 1fr;  /* text | thumb */
     gap: 0.4rem;
@@ -232,11 +285,31 @@ nav {
   .post-image figcaption {
     margin-top: 0.3rem;
     font-size: 0.75rem;
-  }  
-  
-  /* shrink Oreo logo slightly on mobile */
-  .signature {
-    max-width: 120px;  /* smaller than desktop (150px) */
   }
 
+  /* smaller Oreo logo on mobile */
+  .signature {
+    max-width: 120px;
+  }
+
+  /* dropdown behaves like inline list when opened */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: none;
+    margin-top: 0.3rem;
+  }
+
+  .dropdown-content a {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
