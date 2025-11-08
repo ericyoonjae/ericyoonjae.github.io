@@ -141,6 +141,11 @@ footer.site .icon img:hover { opacity: 1; }
   gap: 1.5rem;
   margin-top: 2rem;
 }
+@media (max-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .gallery figure { margin: 0; }
 .gallery img {
   width: 100%;
