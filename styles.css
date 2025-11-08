@@ -19,16 +19,16 @@ a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .wrap {
-  max-width: 700px;       /* limits column width for readability */
+  max-width: 700px;
   width: 100%;
-  margin: 0 auto;          /* centers the block horizontally */
-  padding: 1rem 1rem 3rem; /* top, sides, bottom padding */
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
   text-align: left;
 }
 
 header.site {
   max-width: var(--max);
-  margin: 3rem auto 0.5rem;
+  margin: 3rem auto 0.5rem; /* unchanged */
   text-align: center;
   font-style: italic;
 }
@@ -52,14 +52,14 @@ h2, h3 {
   font-weight: normal;
   font-style: italic;
   font-size: 1.7rem;
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.3rem 0;  /* slightly tighter (was 0.4rem) */
   line-height: 1.3;
 }
 
 .meta {
   color: var(--muted);
   font-size: 0.9rem;
-  margin: 0 0 0.6rem 0;
+  margin: 0 0 0.4rem 0;  /* slightly tighter (was 0.6rem) */
 }
 
 footer.site {
@@ -70,6 +70,7 @@ footer.site {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
 footer.site .icon img {
   width: 20px;
   height: 20px;
@@ -84,22 +85,22 @@ footer.site .icon img:hover {
 }
 
 .signature {
-  max-width: 150px;   /* smaller size — tweak to taste */
+  max-width: 150px;
   height: auto;
   display: block;
-  margin: 0 auto 0.5rem auto; /* less space below image */
-  padding: 0; /* removes extra top/bottom padding */
+  margin: 0 auto 0.5rem auto;
+  padding: 0;
 }
 
 nav {
-  margin-top: 1rem;      /* space between signature and nav links */
+  margin-top: 1rem;
   font-style: normal;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
-  gap: 1.5rem;                           /* even spacing between them */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -109,8 +110,8 @@ nav {
 
 .gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1;       /* makes each photo square */
-  object-fit: cover;          /* crops without stretching */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 6px;
   transition: opacity 0.3s ease;
 }
@@ -129,7 +130,7 @@ nav {
 
 .post-image {
   text-align: left;
-  margin: 2rem 0;
+  margin: 0.8rem 0 1.2rem 0; /* was 2rem 0; now tighter above & below image */
 }
 
 .post-image img {
@@ -146,28 +147,27 @@ nav {
 }
 
 .post-image figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;       /* slightly tighter (was 0.5rem) */
   font-size: 0.9rem;
   color: var(--muted);
   font-style: italic;
 }
 
-/* --- Post list with thumbnail on the RIGHT --- */
+/* --- Post list with thumbnail on the RIGHT (home) --- */
 .posts .post {
   display: grid;
-  grid-template-columns: 1fr 120px;  /* text | image */
+  grid-template-columns: 1fr 120px;
   gap: 1rem;
   align-items: start;
 }
 
-/* optional: a little spacing between entries — your existing .posts article border still applies */
 .posts .post + .post {
   margin-top: 0.75rem;
 }
 
 .posts .thumb img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* square thumbs */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -182,30 +182,30 @@ nav {
 .epigraph-author {
   display: block;
   margin-top: 0.5rem;
-  margin-left: 2.5rem;  /* tweak to taste */
+  margin-left: 2.5rem;
   font-style: normal;
 }
 
 /* --- MOBILE UI IMPROVEMENTS ONLY --- */
 @media (max-width: 640px) {
-  /* tighten space above first post */
+  /* tighten space above first post on home */
   .wrap {
-    padding-top: 0.3rem;   /* reduce default 1rem padding */
+    padding-top: 0.3rem;         /* reduces gap under nav */
   }
 
   .posts {
-    margin-top: 0.5rem;    /* smaller gap between nav and posts */
+    margin-top: 0.5rem;
   }
 
   .posts .post {
     grid-template-columns: 1fr;
-    gap: 0.4rem;            /* slightly smaller gap between text & image */
+    gap: 0.4rem;
   }
 
   .posts .thumb {
-    order: -1;              /* image above text */
+    order: -1;
     max-width: 240px;
-    margin: 0.2rem auto 0;  /* tighter spacing around image */
+    margin: 0.2rem auto 0;
   }
 
   .posts .thumb img {
@@ -213,4 +213,3 @@ nav {
     height: auto;
   }
 }
-
