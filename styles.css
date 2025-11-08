@@ -86,7 +86,7 @@ h2, h3 {
   font-size: 1.8rem;      /* section/page headers: Recent, Essays, Poems, etc. */
   font-style: normal;
   margin-bottom: 0.8rem;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.15px;
 }
 
 .posts .post-body h2 {
