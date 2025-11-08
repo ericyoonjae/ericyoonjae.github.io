@@ -191,27 +191,33 @@ nav {
 
 /* --- MOBILE UI IMPROVEMENTS ONLY --- */
 @media (max-width: 640px) {
-  /* tighten space above first post on home */
+  /* tighten space above first post */
   .wrap {
-    padding-top: 0.3rem;
+    padding-top: 0.2rem;  /* slightly less padding under nav */
   }
 
   .posts {
-    margin-top: 0.4rem;
+    margin-top: 0.3rem;   /* smaller gap between nav and first post */
   }
 
-  /* tighter spacing between post previews */
+  /* even tighter layout for post previews */
   .posts .post {
     grid-template-columns: 1fr;
-    gap: 0.4rem;            /* text ↔ image spacing */
-    margin-top: 0.4rem;     /* reduce space between posts (was ~0.75rem) */
-    padding: 0.5rem 0;      /* slightly smaller padding inside each post */
+    gap: 0.3rem;           /* reduce text ↔ image gap */
+    margin-top: 0.3rem;    /* less space between posts */
+    padding: 0.4rem 0;     /* smaller internal padding */
   }
 
-  /* adjust thumbnail size and spacing */
   .posts .thumb {
     order: -1;
-    max-width: 220px;
-    margin: 0
+    max-width: 210px;
+    margin: 0.1rem auto 0.1rem;  /* tighter vertical spacing around image */
+  }
+
+  .posts .thumb img {
+    width: 100%;
+    height: auto;
+  }
+}
 
     
