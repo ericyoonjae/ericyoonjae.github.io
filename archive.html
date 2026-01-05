@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home</title>
+
+    <!-- ✅ Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W55K086BH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4W55K086BH');
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/oreo.png">
+  </head>
+
+  <body>
+    <header class="site">
+      <a href="/">
+        <img src="/oreo.png" alt="ericyoonjae.com" class="signature">
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a> ·
+        <a href="archive.html">Archive</a> ·
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h2>Archive</h2>
+ <section class="posts">
+        <article class="post">
+          <div class="post-body">
+            <h2>
+              <a href="/essays/apres-moi-le-deluge.html">
+                <em>Après moi, le déluge</em>
+              </a>
+            </h2>
+            <p class="meta">
+              <a href="/essays/">Essays</a> · November 10, 2025
+            </p>
+            <p>A Review of <em>Slow Down: The Degrowth Manifesto</em> by Kōhei Saitō</p>
+          </div>
+          <a class="thumb" href="/essays/apres-moi-le-deluge.html">
+            <img src="/essays/slow-down.png" alt="Slow Down">
+          </a>
+        </article>
+      
+      
+
+        <article class="post">
+          <div class="post-body">
+            <h2>
+              <a href="/poems/beyond-the-walls.html">Beyond the Walls</a>
+            </h2>
+            <p class="meta">
+              <a href="/poems/">Poems</a> · October 17, 2025
+            </p>
+            <p>Yearning for change</p>
+          </div>
+          <a class="thumb" href="/poems/beyond-the-walls.html">
+            <img src="/poems/wall.png" alt="Wall">
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site muted">
+      © <span id="y"></span> Eric Yoonjae Lee<br>
+      <a href="mailto:yoonjaeeric@icloud.com" class="icon" aria-label="Email">
+        <img src="/mail.png" alt="Email" width="20" height="20">
+      </a>
+      <a href="https://www.instagram.com/ericyoonjae/" target="_blank" class="icon" aria-label="Instagram">
+        <img src="/ig.png" alt="Instagram" width="20" height="20">
+      </a>
+    </footer>
+
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
