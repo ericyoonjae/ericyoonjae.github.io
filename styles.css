@@ -303,14 +303,16 @@ footer.site .icon img:hover { opacity: 1; }
   }
 }
 
-/* --- Rectangular banner cropped to 200px height --- */
-.single-post .post-image {
+/* Rectangular banner header */
+.post-banner {
   height: 200px;
   overflow: hidden;
 }
 
-.single-post .post-image img {
+.post-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
+
