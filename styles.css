@@ -335,13 +335,13 @@ footer.site .icon img:hover { opacity: 1; }
 .photo-entry img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
-/* Optional photo captions */
-.photo-entry figcaption,
-.video-entry figcaption {
+/* Optional captions / locations */
+.photo-entry figcaption {
   margin-top: 0.65rem;
   line-height: 1.4;
 }
@@ -359,20 +359,6 @@ footer.site .icon img:hover { opacity: 1; }
   color: var(--muted);
 }
 
-/* Final video */
-.video-entry {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 4.5rem;
-}
-
-.video-entry video {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
 /* Essay text */
 .essay-body {
   margin: 2.5rem 0 3.5rem;
@@ -382,30 +368,40 @@ footer.site .icon img:hover { opacity: 1; }
   margin: 0 0 1.25rem;
 }
 
-/* Mobile */
+
+/* =========================================
+   PHOTO ESSAY — MOBILE
+   ========================================= */
+
 @media (max-width: 640px) {
 
   .photo-essay {
-    margin-top: 2.2rem;
+    width: 100%;
+    margin: 2rem auto 1rem;
   }
 
-  .photo-entry,
-  .video-entry {
+  .photo-entry {
+    width: 88%;
+    max-width: 320px;
+    margin: 0 auto 3rem;
+  }
+
+  .photo-entry img {
+    width: 100%;
     max-width: 100%;
-    margin-bottom: 3.2rem;
+    height: auto;
   }
 
-  .photo-entry figcaption,
-  .video-entry figcaption {
-    margin-top: 0.5rem;
+  .photo-entry figcaption {
+    margin-top: 0.45rem;
   }
 
   .photo-caption {
-    font-size: 0.88rem;
+    font-size: 0.82rem;
   }
 
   .photo-location {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 
   .essay-body {
